@@ -1,0 +1,31 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-icon icon ion-arrow-left-c" ui-sref="app.home"></button>
+        <h1 class="title">BROWSE RESTAURANT</h1>
+    </ion-header-bar>
+
+    <ion-content class="padding restaurant-content">
+      <ion-list class="favorite-restaurant-list">
+        <ion-item class="item-divider item-icon">
+          <i class="icon ion-star"></i> Favorite Restaurant
+        </ion-item>
+        <div class="item" ng-repeat="restaurant in favoriteRestaurantList">
+          {{restaurant}}
+          <br>
+          <a class="button button-positive">View More</a>
+        </div>
+      </ion-list>
+      <br>
+      <ion-list class="nearby-restaurant-list">
+        <ion-item class="item-divider item-icon">
+          <i class="icon ion-location"></i> Nearby Restaurant
+        </ion-item>
+        <div class="item" ng-repeat="restaurant in nearbyRestaurantList">
+          {{restaurant}}
+          <br>
+          <a class="button button-positive">View More</a>
+        </div>
+      </ion-list>
+    </ion-content>
+
+</ion-view>

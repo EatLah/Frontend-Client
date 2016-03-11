@@ -8,6 +8,5 @@
  */
 angular.module('MyApp')
   .controller('FeedbackController', function($scope, $state, $ionicHistory) {
-
    
   });
