@@ -1,0 +1,14 @@
+{
+  "name": "Frontend-Client",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "index",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "defaultBrowser": "chrome"
+}

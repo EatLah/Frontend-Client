@@ -1,0 +1,46 @@
+<ion-side-menus>
+    <!-- Center content -->
+    <ion-side-menu-content drag-content="false">
+
+        <ion-nav-view name="viewContent">
+
+        </ion-nav-view>
+    </ion-side-menu-content>
+
+    <!-- Left menu -->
+    <ion-side-menu side="left" class="side-menu">
+
+        <ion-header-bar align-title="center" class="bar-positive header-bar">
+            <!-- <h1 class="title">Menu</h1> -->
+        </ion-header-bar>
+
+        <ion-content class="has-header">
+            <div class="list">
+                <a menu-close class="item item-icon-left item-positive item-borderless" ui-sref="app.home">
+                    <i class="icon ion-home"></i>
+                    HOME
+                </a>
+                <a menu-close class="item item-icon-left item-positive item-borderless" ui-sref="app.account">
+                    <i class="icon ion-person"></i>
+                    MY ACCOUNT
+                </a>
+                <a menu-close class="item item-icon-left item-positive item-borderless" ui-sref="app.reservation">
+                    <i class="icon ion-calendar"></i>
+                    VIEW RESERVATION
+                </a>
+                <a menu-close class="item item-icon-left item-positive item-borderless" ui-sref="app.payment">
+                    <i class="icon ion-card"></i>
+                    VIEW PAYMENT
+                </a>
+                <a menu-close class="item item-icon-left item-positive item-borderless" ui-sref="app.feedback">
+                    <i class="icon ion-compose"></i>
+                    FEEDBACK
+                </a>
+                <a class="item item-icon-left item-positive item-borderless" ng-click="logout()">
+                    <i class="icon ion-power"></i>
+                    LOG OUT
+                </a>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

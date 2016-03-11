@@ -1,0 +1,22 @@
+.account-content {
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+
+	.content-main {
+		.content-main-title {
+			.p {
+				.avatar {
+			    	width: 30%;
+			    	height: 30%;
+			    	padding-top: 10%;
+			    }
+		    }
+		}
+
+		.list {
+			text-align: left;
+		}
+	}
+}
