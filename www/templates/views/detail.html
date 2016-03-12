@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-icon icon ion-arrow-left-c" ui-sref="app.restaurant"></button>
+        <h1 class="title">DETAIL</h1>
+    </ion-header-bar>
+
+    <ion-content class="padding account-content">
+      <ion-refresher pulling-text="Pull to refresh" on-refresh="getRestaurant()"></ion-refresher>
+      <div class="content-main">
+        <div class="content-main-title">
+          <p class="title">
+            <img class="avatar" src="img/restaurant_square.png" alt="WeLo - User" />
+          </p>
+        </div>
+        <div class="list card">
+          <div class="item item-icon-left item-text-wrap"><i class="icon ion-email"></i>Email: </div>
+          <div class="item item-icon-left item-text-wrap"><i class="icon ion-person"></i>Name: </div>
+          <div class="item item-icon-left item-text-wrap"><i class="icon ion-iphone"></i>Phone: </div>
+          <div class="item item-icon-left item-text-wrap"><i class="icon ion-card"></i>Credit Card: </div>
+        </div>
+      </div>
+    </ion-content>
+
+</ion-view>

@@ -72,6 +72,16 @@ angular.module('MyApp')
         }
       }
     })
+    .state('app.detail', {
+      url: '/detail',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/detail.html',
+          controller: 'DetailController'
+        }
+      }
+    })
 
   // redirects to default route for undefined routes
   $urlRouterProvider.otherwise('/app/home');

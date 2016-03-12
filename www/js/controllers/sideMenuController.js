@@ -20,16 +20,20 @@ angular.module('MyApp')
     });
 
     $scope.logout = function() {
-      popUpAlert('Logout', 'Are you sure you want to logout?');
+      popUpConfirm('Logout', 'Are you sure you want to logout?');
     };
 
-    var popUpAlert = function(title, content) {
-      var alertPopup = $ionicPopup.alert({
+    var popUpConfirm = function(title, content) {
+      var confirmPopup = $ionicPopup.confirm({
         title: title,
         template: content
       });
-      alertPopup.then(function(res) {
-        // todo
+      confirmPopup.then(function(res) {
+        if(res) {
+          console.log('Logout!');
+        } else {
+          console.log('Not logout!');
+        }
       });
     };
 

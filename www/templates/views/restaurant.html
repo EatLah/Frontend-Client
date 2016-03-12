@@ -4,26 +4,29 @@
         <h1 class="title">BROWSE RESTAURANT</h1>
     </ion-header-bar>
 
-    <ion-content class="padding restaurant-content">
+    <ion-content class="restaurant-content">
+      <ion-refresher pulling-text="Pull to refresh" on-refresh="getRestaurantList()"></ion-refresher>
       <ion-list class="favorite-restaurant-list">
         <ion-item class="item-divider item-icon">
           <i class="icon ion-star"></i> Favorite Restaurant
         </ion-item>
-        <div class="item" ng-repeat="restaurant in favoriteRestaurantList">
-          {{restaurant}}
-          <br>
-          <a class="button button-positive">View More</a>
+        <div class="item item-thumbnail-left" ng-repeat="restaurant in favoriteRestaurantList">
+          <img class="item-thumbnail" src="img/restaurant_square.png">
+          <h2 class="item-title">{{restaurant.restaurantName}}</h2>
+          <p class="item-text">{{restaurant.restaurantType}}</p>
+          <a class="button button-positive" ng-click="goToDetailPage({{restaurant.ID}})">View More</a>
         </div>
       </ion-list>
       <br>
-      <ion-list class="nearby-restaurant-list">
+      <ion-list class="all-restaurant-list">
         <ion-item class="item-divider item-icon">
-          <i class="icon ion-location"></i> Nearby Restaurant
+          <i class="icon ion-location"></i> All Restaurant
         </ion-item>
-        <div class="item" ng-repeat="restaurant in nearbyRestaurantList">
-          {{restaurant}}
-          <br>
-          <a class="button button-positive">View More</a>
+        <div class="item item-thumbnail-left" ng-repeat="restaurant in allRestaurantList">
+          <img class="item-thumbnail" src="img/restaurant_square.png">
+          <h2 class="item-title">{{restaurant.restaurantName}}</h2>
+          <p class="item-text">{{restaurant.restaurantType}}</p>
+          <a class="button button-positive" ng-click="goToOrderDetailPage({{restaurant.ID}})">View More</a>
         </div>
       </ion-list>
     </ion-content>
