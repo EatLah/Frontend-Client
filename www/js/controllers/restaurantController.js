@@ -46,10 +46,8 @@ angular.module('MyApp')
 
   	$scope.show = function() {
 	    $ionicLoading.show({
-		      template: '<ion-spinner icon="lines" class="spinner-positive"></ion-spinner>' +
-		      					'<br>' +
-		      					'<span class="loading-text">Loading ...</span>',
-		      duration: 500
+		    templateUrl: 'templates/utils/load.html',
+		    duration: 500
 		  });
 	  };
 	  $scope.hide = function(){
