@@ -35,7 +35,7 @@ angular.module('MyApp')
 			});
 		};
   	
-  	$scope.goToMenuPage = function() {
+  	$scope.goToMenuCategoryPage = function() {
   		$state.go('app.menu');
   	};
   });

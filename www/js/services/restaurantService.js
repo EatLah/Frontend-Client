@@ -7,7 +7,7 @@ angular.module('MyApp')
   // var token = LocalStorageService.get('token');
   var getAllRestaurants = function(callback) {
     $http({
-      url: ApiService.getEndpoint() + '/restaurant/all_restaurants',
+      url: ApiService.getEndpoint() + '/restaurant/restaurants',
       method: 'GET'
     }).success(function(data) {
       callback(data);

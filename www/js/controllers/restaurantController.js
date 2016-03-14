@@ -74,12 +74,12 @@ angular.module('MyApp')
 	  };
 
 	  $scope.goToFavoriteRestaurantDetailPage = function(index) {
-	  	LocalStorageService.setObject('restaurantDetail', $scope.favoriteRestaurantList[index - 1]);
+	  	LocalStorageService.setObject('restaurantDetail', $scope.favoriteRestaurantList[index]);
 	  	$state.go('app.detail');
 	  };
 
 	  $scope.goToAllRestaurantDetailPage = function(index) {
-	  	LocalStorageService.setObject('restaurantDetail', $scope.allRestaurantList[index - 1]);
+	  	LocalStorageService.setObject('restaurantDetail', $scope.allRestaurantList[index]);
 	  	$state.go('app.detail');
 	  };
   });

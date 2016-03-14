@@ -1,0 +1,23 @@
+.item-content {
+	.menu-item-list {
+		.item {
+			.item-thumbnail {
+				margin-left: 3%;
+			}
+			.item-title {
+				margin-top: 3%;
+				margin-left: 3%;
+			}
+			.item-text {
+				margin-left: 3%;
+			}
+			.button {
+				margin-left: 3%;
+				padding-top: 3%;
+				border-radius: 5px;
+				line-height: 5px !important;
+    			min-height: 24px !important;
+			}
+		}
+	}
+}

@@ -92,6 +92,16 @@ angular.module('MyApp')
         }
       }
     })
+    .state('app.item', {
+      url: '/item',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/item.html',
+          controller: 'ItemController'
+        }
+      }
+    })
 
   // redirects to default route for undefined routes
   $urlRouterProvider.otherwise('/app/home');

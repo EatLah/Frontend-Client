@@ -1,0 +1,19 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+      <button class="button button-icon icon ion-arrow-left-c" ui-sref="app.menu"></button>
+      <h1 class="title">{{menuCategory.categoryName}}</h1>
+    </ion-header-bar>
+
+    <ion-content class="item-content">
+      <ion-refresher pulling-text="Pull to refresh" on-refresh="getMenuItems()"></ion-refresher>
+      <ion-list class="menu-item-list">
+        <div class="item item-thumbnail-left" ng-repeat="item in menuItems">
+          <img class="item-thumbnail" src="img/apple.png">
+          <h2 class="item-title">{{item.foodItemName}}</h2>
+          <p class="item-text">Price: S${{item.foodItemPrice}}</p>
+          <a class="button button-positive" ng-click="">Order</a>
+        </div>
+      </ion-list>
+    </ion-content>
+
+</ion-view>

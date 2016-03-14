@@ -18,7 +18,6 @@ angular.module('MyApp')
 	    $ionicLoading.show({
 		    templateUrl: 'templates/utils/load.html'
 		  });
-		  // console.log($scope.allRestaurantList);
 	  };
 
 	  $scope.hide = function(){
@@ -35,6 +34,11 @@ angular.module('MyApp')
 	  			$scope.hide();
 	  		}, 500);
 			});
+	  };
+
+	  $scope.goToMenuCategoryItemPage = function(index) {
+	  	LocalStorageService.setObject('menuCategory', $scope.menuCategories[index]);
+	  	$state.go('app.item');
 	  };
 
   });

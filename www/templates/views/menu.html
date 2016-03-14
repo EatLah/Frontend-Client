@@ -6,7 +6,7 @@
 
   <ion-content class="menu-content">
     <ion-list class="menu-list">
-      <ion-item class="menu-category item-icon-left item-icon-right" ng-repeat="menuCategory in menuCategories" ng-click="">
+      <ion-item class="menu-category item-icon-left item-icon-right" ng-repeat="menuCategory in menuCategories" ng-click="goToMenuCategoryItemPage($index)">
         <i class="icon ion-pizza"></i>
         <div class="item-text package-item">{{menuCategory.categoryName}}</div>
         <i class="icon ion-chevron-right"></i>
