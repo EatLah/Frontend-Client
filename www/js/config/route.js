@@ -82,6 +82,16 @@ angular.module('MyApp')
         }
       }
     })
+    .state('app.menu', {
+      url: '/menu',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/menu.html',
+          controller: 'MenuController'
+        }
+      }
+    })
 
   // redirects to default route for undefined routes
   $urlRouterProvider.otherwise('/app/home');

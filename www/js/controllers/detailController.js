@@ -34,5 +34,8 @@ angular.module('MyApp')
 	  		}, 500);
 			});
 		};
-   
+  	
+  	$scope.goToMenuPage = function() {
+  		$state.go('app.menu');
+  	};
   });

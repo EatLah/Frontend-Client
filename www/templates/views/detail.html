@@ -4,7 +4,7 @@
         <h1 class="title">DETAIL</h1>
     </ion-header-bar>
 
-    <ion-content class="padding account-content">
+    <ion-content class="account-content">
       <ion-refresher pulling-text="Pull to refresh" on-refresh="getRestaurant()"></ion-refresher>
       <div class="content-main">
         <div class="content-main-title">
@@ -12,12 +12,15 @@
             <img class="avatar" src="img/restaurant_square.png" alt="WeLo - User" />
           </p>
         </div>
-        <div class="list card">
+        <div class="list">
           <div class="item item-icon-left item-text-wrap"><i class="icon ion-home"></i>Name: {{selectedRestaurant.restaurantName}}</div>
           <div class="item item-icon-left item-text-wrap"><i class="icon ion-fork"></i>Type: {{selectedRestaurant.restaurantType}}</div>
           <div class="item item-icon-left item-text-wrap"><i class="icon ion-coffee"></i>Cusine: {{selectedRestaurant.restaurantCusine}}</div>
           <div class="item item-icon-left item-text-wrap"><i class="icon ion-cash"></i>GST: {{selectedRestaurant.hasGst}}</div>
           <div class="item item-icon-left item-text-wrap"><i class="icon ion-man"></i>Service Charge: {{selectedRestaurant.hasServiceCharge}}</div>
+        </div>
+        <div class="padding">
+          <div class="button button-block button-calm" ng-click="goToMenuPage()">Reserve Now</div>
         </div>
       </div>
     </ion-content>
