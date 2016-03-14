@@ -13,10 +13,11 @@
           </p>
         </div>
         <div class="list card">
-          <div class="item item-icon-left item-text-wrap"><i class="icon ion-email"></i>Email: </div>
-          <div class="item item-icon-left item-text-wrap"><i class="icon ion-person"></i>Name: </div>
-          <div class="item item-icon-left item-text-wrap"><i class="icon ion-iphone"></i>Phone: </div>
-          <div class="item item-icon-left item-text-wrap"><i class="icon ion-card"></i>Credit Card: </div>
+          <div class="item item-icon-left item-text-wrap"><i class="icon ion-home"></i>Name: {{selectedRestaurant.restaurantName}}</div>
+          <div class="item item-icon-left item-text-wrap"><i class="icon ion-fork"></i>Type: {{selectedRestaurant.restaurantType}}</div>
+          <div class="item item-icon-left item-text-wrap"><i class="icon ion-coffee"></i>Cusine: {{selectedRestaurant.restaurantCusine}}</div>
+          <div class="item item-icon-left item-text-wrap"><i class="icon ion-cash"></i>GST: {{selectedRestaurant.hasGst}}</div>
+          <div class="item item-icon-left item-text-wrap"><i class="icon ion-man"></i>Service Charge: {{selectedRestaurant.hasServiceCharge}}</div>
         </div>
       </div>
     </ion-content>

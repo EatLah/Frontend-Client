@@ -14,7 +14,7 @@
           <img class="item-thumbnail" src="img/restaurant_square.png">
           <h2 class="item-title">{{restaurant.restaurantName}}</h2>
           <p class="item-text">{{restaurant.restaurantType}}</p>
-          <a class="button button-positive" ng-click="goToDetailPage({{restaurant.ID}})">View More</a>
+          <a class="button button-positive" ng-click="goToFavoriteRestaurantDetailPage({{restaurant.ID}})">View More</a>
         </div>
       </ion-list>
       <br>
@@ -26,7 +26,7 @@
           <img class="item-thumbnail" src="img/restaurant_square.png">
           <h2 class="item-title">{{restaurant.restaurantName}}</h2>
           <p class="item-text">{{restaurant.restaurantType}}</p>
-          <a class="button button-positive" ng-click="goToOrderDetailPage({{restaurant.ID}})">View More</a>
+          <a class="button button-positive" ng-click="goToAllRestaurantDetailPage({{restaurant.ID}})">View More</a>
         </div>
       </ion-list>
     </ion-content>

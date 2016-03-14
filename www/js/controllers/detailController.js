@@ -7,24 +7,32 @@
  * # DetailController
  */
 angular.module('MyApp')
-  .controller('DetailController', function($scope, $state, $ionicLoading, $ionicHistory, LocalStorageService) {
+  .controller('DetailController', function($scope, $state, $ionicLoading, $ionicHistory, LocalStorageService, RestaurantService) {
 
   	$scope.$on('$ionicView.enter', function() {
 		  $scope.selectedRestaurant = LocalStorageService.getObject('restaurantDetail');
-		  $scope.selectedRestaurantIndex = LocalStorageService.get('restaurantDetailIndex', -1);
-		  $scope.getRestaurant();
 		});
 
 		$scope.show = function() {
 	    $ionicLoading.show({
-		    templateUrl: 'templates/utils/load.html',
-		    duration: 500
+		    templateUrl: 'templates/utils/load.html'
 		  });
+	  };
+
+	  $scope.hide = function(){
+	    $ionicLoading.hide();
 	  };
 
 		$scope.getRestaurant = function() {
 			$scope.show();
-			$scope.$broadcast('scroll.refreshComplete');
+			RestaurantService.getRestaurantByID($scope.selectedRestaurant.ID, function(data) {
+				$scope.selectedRestaurant = data;
+				$scope.$broadcast('scroll.refreshComplete');
+
+				setTimeout(function() {
+	  			$scope.hide();
+	  		}, 500);
+			});
 		};
    
   });
