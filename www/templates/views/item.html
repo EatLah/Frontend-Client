@@ -11,7 +11,7 @@
           <img class="item-thumbnail" src="img/apple.png">
           <h2 class="item-title">{{item.foodItemName}}</h2>
           <p class="item-text">Price: S${{item.foodItemPrice}}</p>
-          <a class="button button-positive" ng-click="">Order</a>
+          <a class="button button-positive" ng-click="goToOrderPage($index)">Order</a>
         </div>
       </ion-list>
     </ion-content>

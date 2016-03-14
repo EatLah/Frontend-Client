@@ -37,4 +37,9 @@ angular.module('MyApp')
 			});
 	  };
 
+	  $scope.goToOrderPage = function(index) {
+	  	LocalStorageService.setObject('menuItem', $scope.menuItems[index]);
+	  	$state.go('app.order');
+	  };
+
   });

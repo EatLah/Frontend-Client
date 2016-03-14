@@ -102,6 +102,16 @@ angular.module('MyApp')
         }
       }
     })
+    .state('app.order', {
+      url: '/order',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/order.html',
+          controller: 'OrderController'
+        }
+      }
+    })
 
   // redirects to default route for undefined routes
   $urlRouterProvider.otherwise('/app/home');

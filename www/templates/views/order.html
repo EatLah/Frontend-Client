@@ -1,0 +1,41 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+      <button class="button button-icon icon ion-arrow-left-c" ui-sref="app.item"></button>
+      <h1 class="title">ORDER</h1>
+    </ion-header-bar>
+
+    <ion-content class="order-content">
+      <div class="content-main">
+        <div class="content-main-title">
+          <p class="title">
+            <img class="item-thumbnail" src="img/apple.png" alt="order" />
+          </p>
+        </div>
+        <div class="list">
+          <div class="item">
+            <div class="item-name">{{menuItem.foodItemName}}</div>
+            <div class="item-price">S${{menuItem.foodItemPrice}}</div>
+          </div>
+          <div class="item item-description">Description: {{menuItem.foodItemDescription}}</div>
+          <div class="item item-quantity">
+            <div class="quantity-text">Quantity</div>
+            <button class="button button-small icon ion-minus minus-button" ng-click='decreaseOneQuantity()'></button>
+              <label class="item-input-wrapper quantity-label">
+                <input class="quantity-input" type="number" ng-model="orderItemQuantity">
+              </label>
+            <button class="button button-small icon ion-plus plug-button" ng-click='increaseOneQuantity()'></button>
+          </div>
+          <div class="item">
+            <p>Special Requests (Optional) :</p>
+            <label class="item item-input item-special-req">
+              <input type="text" ng-model="orderItemSpecialRequests">
+            </label>
+          </div>
+        </div>
+        <div class="padding">
+          <div class="button button-block button-positive" ng-click="addToCart()">Add to cart</div>
+        </div>
+      </div>
+    </ion-content>
+
+</ion-view>
