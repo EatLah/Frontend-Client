@@ -12,16 +12,36 @@
           </p>
         </div>
         <div class="list">
-          <div class="item item-icon-left item-text-wrap">
-            <i class="icon ion-home"></i>Name: {{selectedRestaurant.restaurantName}}
+          <div class="item item-text-wrap guests-number">
+            <div class="number-title">Number of Guests:</div>
+            <div class="row">
+              <label class="item-input adults-number col col-40 col-offset-5">
+                <input type="number" placeholder="Adults">
+              </label>
+              <label class="item-input children-number col col-40 col-offset-10">
+                <input type="number" placeholder="Children">
+              </label>
+            </div>
           </div>
-          <div class="item item-icon-left item-text-wrap"><i class="icon ion-fork"></i>Type: {{selectedRestaurant.restaurantType}}</div>
-          <div class="item item-icon-left item-text-wrap"><i class="icon ion-coffee"></i>Cusine: {{selectedRestaurant.restaurantCusine}}</div>
-          <div class="item item-icon-left item-text-wrap"><i class="icon ion-cash"></i>GST: {{selectedRestaurant.hasGst}}</div>
-          <div class="item item-icon-left item-text-wrap"><i class="icon ion-man"></i>Service Charge: {{selectedRestaurant.hasServiceCharge}}</div>
+          <div class="item tem-text-wrap dining-date">
+            <div class="date-title">Date:</div>
+            <div class="row">
+              <label class="item-input date-input col col-90 col-offset-5">
+                <input type="date">
+              </label>
+            </div>
+          </div>
+          <div class="item tem-text-wrap dining-time">
+            <div class="time-title">Time:</div>
+            <div class="row">
+              <label class="item-input time-input col col-90 col-offset-5">
+                <input type="time">
+              </label>
+            </div>
+          </div>
         </div>
         <div class="padding">
-          <div class="button button-block button-calm" ng-click="">Reserve Now</div>
+          <div class="button button-block button-positive" ng-click="">Next</div>
         </div>
       </div>
     </ion-content>

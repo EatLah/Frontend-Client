@@ -1,11 +1,8 @@
 .dining-content {
-	width: 100%;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-
 	.content-main {
 		.content-main-title {
+			text-align: center;
+
 			.p {
 				.logo {
 			    	width: 30%;
@@ -16,7 +13,54 @@
 		}
 
 		.list {
-			text-align: left;
+			.guests-number {
+				.number-title {
+					margin-left: 7%;
+				}
+
+				.adults-number {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+					margin-left: 5%;
+				}
+
+				.children-number {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+				}
+			}
+
+			.dining-date {
+				.date-title {
+					margin-left: 7%;
+				}
+
+				.date-input {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+					margin-left: 5%;
+				}
+			}
+
+			.dining-time {
+				.time-title {
+					margin-left: 7%;
+				}
+
+				.time-input {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+					margin-left: 5%;
+				}
+			}
 		}
 	}
 }
