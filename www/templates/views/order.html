@@ -23,11 +23,11 @@
               <label class="item-input-wrapper quantity-label">
                 <input class="quantity-input" type="number" ng-model="orderItemQuantity">
               </label>
-            <button class="button button-small icon ion-plus plug-button" ng-click='increaseOneQuantity()'></button>
+            <button class="button button-small icon ion-plus plus-button" ng-click='increaseOneQuantity()'></button>
           </div>
           <div class="item">
             <div class="item-total-text">Total</div>
-            <div class="item-total-cost">S${{(menuItem.foodItemPrice*orderItemQuantity).toFixed(2)}}</div>
+            <div class="item-total-price">S${{(menuItem.foodItemPrice*orderItemQuantity).toFixed(2)}}</div>
           </div>
           <div class="item">
             <p>Special Requests (Optional) :</p>

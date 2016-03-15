@@ -28,7 +28,7 @@ angular.module('MyApp')
   		$scope.orderItem = {
   			menuItem: $scope.menuItem,
   			quantity: $scope.orderItemQuantity,
-  			totalCost: $scope.orderItemQuantity*$scope.menuItem.foodItemPrice
+  			totalPrice: $scope.orderItemQuantity*$scope.menuItem.foodItemPrice
   		};
 
       $scope.cart = LocalStorageService.getObject('cart');

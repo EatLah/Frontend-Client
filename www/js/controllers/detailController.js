@@ -36,6 +36,7 @@ angular.module('MyApp')
 		};
   	
   	$scope.goToMenuCategoryPage = function() {
+  		LocalStorageService.setObject('cart', []);
   		$state.go('app.menu');
   	};
   });

@@ -112,6 +112,16 @@ angular.module('MyApp')
         }
       }
     })
+    .state('app.cart', {
+      url: '/cart',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/cart.html',
+          controller: 'CartController'
+        }
+      }
+    })
 
   // redirects to default route for undefined routes
   $urlRouterProvider.otherwise('/app/home');

@@ -12,8 +12,6 @@ angular.module('MyApp')
   	$scope.$on('$ionicView.enter', function() {
   		$scope.selectedRestaurant = LocalStorageService.getObject('restaurantDetail');
 		  $scope.getMenuCategories($scope.selectedRestaurant.ID);
-
-		  LocalStorageService.setObject('cart', []);
 		});
 
   	$scope.show = function() {

@@ -16,7 +16,8 @@ $dark:                            #444 !default;
 */
 
 $positive:                        #640e27 !default;
-$calm:                            #009245 !default;							
+$calm:                            #009245 !default;						
+$balanced:                        #009245 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -30,6 +31,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "views/menu.scss";
 @import "views/item.scss";
 @import "views/order.scss";
+@import "views/cart.scss";
 
 @import "sideMenu.scss";
 @import "default.scss";

@@ -1,0 +1,38 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+      <button class="button button-icon icon ion-arrow-left-c" ui-sref="app.menu"></button>
+      <h1 class="title">Order List</h1>
+    </ion-header-bar>
+
+    <ion-content class="cart-content">
+      <ion-list class="cart-item-list">
+        <div class="item item-thumbnail-left" ng-repeat="item in cart">
+          <img class="item-thumbnail" src="img/apple.png">
+          <h2 class="item-title">
+            {{item.menuItem.foodItemName}}
+            <i class="icon ion-close-circled" ng-click="removeItemFromCart($index)"></i>
+          </h2>
+          <div class="item-price">
+            <div class="item-price-text">Price </div>
+            <div class="item-price-value">S${{item.menuItem.foodItemPrice.toFixed(2)}}</div>
+          </div>
+          <div class="item-quantity">
+            <div class="item-quantity-text">Quantity</div>
+            <div class="item-quantity-value">{{item.quantity}}</div>
+          </div>
+          <div class="item-total">
+            <div class="item-total-text">Total</div>
+            <div class="item-total-value">S${{item.totalPrice.toFixed(2)}}</div>
+          </div>
+        </div>
+        <div class="item cart-total">
+          <div class="cart-total-text">Total</div>
+          <div class="cart-total-value">S${{total.toFixed(2)}}</div>
+        </div>
+      </ion-list>
+      <div class="padding">
+        <button class="button button-balanced button-block">Confirm Order</button>
+      </div>
+    </ion-content>
+
+</ion-view>
