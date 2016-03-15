@@ -17,17 +17,17 @@ angular.module('MyApp')
   	$scope.orderItemSpecialRequests = '';
 
   	$scope.decreaseOneQuantity = function() {
-
+  		$scope.orderItemQuantity --;
   	};
 
   	$scope.increaseOneQuantity = function() {
-
+  		$scope.orderItemQuantity ++;
   	};
 
   	$scope.addToCart = function() {
   		$scope.orderItem = {
   			orderItemID: null,
-  			
+
   		};
   	};
 
