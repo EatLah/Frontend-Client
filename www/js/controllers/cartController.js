@@ -20,14 +20,12 @@ angular.module('MyApp')
 	        var item = $scope.cart[i];
 	        $scope.total += (item.menuItem.foodItemPrice * item.quantity);
 	    }
-
-	    
 		};
 
 		$scope.removeItemFromCart = function(index) {
 			$scope.cart.splice(index, 1);
 			LocalStorageService.setObject('cart', $scope.cart);
 			$scope.getTotalPrice();
-		}
+		};
 
   });
