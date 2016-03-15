@@ -13,6 +13,13 @@
 		}
 
 		.list {
+			font-weight: bold;
+
+			.restaurant-name {
+				text-align: center;
+				font-size: 25px;
+			}
+
 			.guests-number {
 				.number-title {
 					margin-left: 7%;

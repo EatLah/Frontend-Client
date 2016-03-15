@@ -7,6 +7,10 @@
  * # DiningController
  */
 angular.module('MyApp')
-  .controller('DiningController', function($scope, $state, $ionicHistory) {
-   
+  .controller('DiningController', function($scope, $state, LocalStorageService) {
+
+  	$scope.$on('$ionicView.enter', function() {
+  		$scope.restaurant = LocalStorageService.getObject('restaurantDetail');
+		});
+
   });
