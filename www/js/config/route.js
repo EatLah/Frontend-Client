@@ -122,6 +122,16 @@ angular.module('MyApp')
         }
       }
     })
+    .state('app.dining', {
+      url: '/dining',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/dining.html',
+          controller: 'DiningController'
+        }
+      }
+    })
 
   // redirects to default route for undefined routes
   $urlRouterProvider.otherwise('/app/home');

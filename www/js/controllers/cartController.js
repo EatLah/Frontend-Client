@@ -28,4 +28,9 @@ angular.module('MyApp')
 			$scope.getTotalPrice();
 		};
 
+		$scope.goToInfoPage = function() {
+			LocalStorageService.setObject('cart', $scope.cart);
+			$state.go('app.dining');
+		};
+
   });
