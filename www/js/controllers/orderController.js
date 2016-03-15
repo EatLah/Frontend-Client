@@ -26,9 +26,16 @@ angular.module('MyApp')
 
   	$scope.addToCart = function() {
   		$scope.orderItem = {
-  			orderItemID: null,
-
+  			menuItem: $scope.menuItem,
+  			quantity: $scope.orderItemQuantity,
+  			totalCost: $scope.orderItemQuantity*$scope.menuItem.foodItemPrice
   		};
+
+      $scope.cart = LocalStorageService.getObject('cart');
+      $scope.cart.push($scope.orderItem);
+      LocalStorageService.setObject('cart', $scope.cart);
+
+      $state.go('app.menu');
   	};
 
   });
