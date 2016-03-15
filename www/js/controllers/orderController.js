@@ -17,7 +17,9 @@ angular.module('MyApp')
   	$scope.orderItemSpecialRequests = '';
 
   	$scope.decreaseOneQuantity = function() {
-  		$scope.orderItemQuantity --;
+  		if ($scope.orderItemQuantity > 1) {
+        $scope.orderItemQuantity --;
+      }
   	};
 
   	$scope.increaseOneQuantity = function() {

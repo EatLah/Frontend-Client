@@ -21,7 +21,7 @@
             <div class="quantity-text">Quantity</div>
             <button class="button button-small icon ion-minus minus-button" ng-click='decreaseOneQuantity()'></button>
               <label class="item-input-wrapper quantity-label">
-                <input class="quantity-input" type="number" ng-model="orderItemQuantity">
+                <input class="quantity-input" type="number" min="1" ng-model="orderItemQuantity" disabled="">
               </label>
             <button class="button button-small icon ion-plus plus-button" ng-click='increaseOneQuantity()'></button>
           </div>
