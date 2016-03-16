@@ -1,0 +1,97 @@
+.info-content {
+	.content-main {
+		.content-main-title {
+			.title {
+				font-size: 20px;
+				font-weight: bold;
+				margin: 4%;
+		    }
+
+		    .text {
+		    	font-color: #020202;
+		    	margin: 4%;
+		    }
+		}
+
+		.list {
+			font-weight: bold;
+
+			.info-prefix {
+				.prefix-title {
+					margin-left: 7%;
+				}
+
+				.prefix-input {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+					margin-left: 5%;
+				}
+			}
+
+			.info-name {
+				.name-title {
+					margin-left: 7%;
+				}
+
+				.first-name {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+					margin-left: 5%;
+				}
+
+				.last-name {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+				}
+			}
+
+			.info-mobile {
+				.mobile-title {
+					margin-left: 7%;
+				}
+
+				.mobile-input {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+					margin-left: 5%;
+				}
+			}
+
+			.info-email {
+				.email-title {
+					margin-left: 7%;
+				}
+
+				.email-input {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+					margin-left: 5%;
+				}
+			}
+
+			.info-req {
+				.req-title {
+					margin-left: 7%;
+				}
+
+				.req-input {
+					border: solid 1px #f2f2f2;
+					border-radius: 15px;
+					padding-left: 8%;
+					margin-top: 3%;
+					margin-left: 5%;
+				}
+			}
+		}
+	}
+}

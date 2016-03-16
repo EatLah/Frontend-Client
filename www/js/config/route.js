@@ -132,6 +132,16 @@ angular.module('MyApp')
         }
       }
     })
+    .state('app.info', {
+      url: '/info',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/info.html',
+          controller: 'InfoController'
+        }
+      }
+    })
 
   // redirects to default route for undefined routes
   $urlRouterProvider.otherwise('/app/home');
