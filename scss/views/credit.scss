@@ -1,0 +1,35 @@
+.credit-page {
+	background: url("../img/EATLah_consumer_BG.jpg") no-repeat center center fixed;
+	background-size: cover;
+
+	.credit-content {
+		width: 100%;
+		text-align: center;
+		.content-main {
+			margin-bottom: 10%;
+
+			.content-main-title {
+			    .title {
+				    font-size: 25px;
+				    color: white;
+				   	margin-top: 20%;
+			    }
+	  		}
+		}
+
+		.terms {
+
+			color: white;
+		}
+
+		.button-full-group {
+			.button {
+				margin-top: 10%;
+			}
+		}
+
+		.skip {
+			color: white;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+.login-page {
+	background: url("../img/EATLah_consumer_BG.jpg") no-repeat center center fixed;
+	background-size: cover;
+
+	.login-content {
+		width: 100%;
+		text-align: center;
+		.content-main {
+			.content-main-title {
+			    .title {
+			    	.logo {
+				    	width: 50%;
+				    	height: 50%;
+				    	margin-top: 10%;
+				    }
+			    }
+	  		}
+		}
+
+		.button-full-group {
+			a {
+				color: white;
+			}
+		}
+
+		.button-group {
+			margin-top: 20%;
+
+			.register-text {
+				color: white;
+			}
+		}
+	}
+}

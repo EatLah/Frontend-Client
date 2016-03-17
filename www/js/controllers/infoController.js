@@ -19,6 +19,44 @@ angular.module('MyApp')
   			if (res) {
   				console.log("Make this reservation!");
   				// Create a lot of things in database ...
+  				$scope.reservation = {
+  					reservationID: null,
+  					restaurantID: null,
+  					customerID: null,
+  					numberOfPax: null,
+  					reservationStatus: null,
+  					bookedTimeslot: null,
+  					orderNumber: null,
+  					review: null
+  				};
+  				$scope.customOrder = {
+  					orderID: null,
+  					restaurantID: null,
+  					reservationID: null,
+  					tableNumber: null,
+  					staffID: null,
+  					orderTimestamp: null,
+  					totalBill: null,
+  					orderStatus: null,
+  					orderType: null
+  				};
+
+  				// template
+  				$scope.orderItem = {
+  					orderItemID: null,
+  					orderNumber: null,
+  					restaurantID: null,
+  					reservationID: null,
+  					tableNumber: null,
+  					foodItemID: null,
+  					orderQty: null,
+  					subTotal: null,
+  					pax: null,
+  					request: null,
+  					prepStatus: null
+  				};
+
+  				$state.go('app.home');
   			} else {
   				console.log("Don't make this reservation!");
   			}

@@ -142,6 +142,36 @@ angular.module('MyApp')
         }
       }
     })
+    .state('app.login', {
+      url: '/login',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/login.html',
+          controller: 'LoginController'
+        }
+      }
+    })
+    .state('app.register', {
+      url: '/register',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/register.html',
+          controller: 'RegisterController'
+        }
+      }
+    })
+    .state('app.credit', {
+      url: '/credit',
+      cache: false,
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/views/credit.html',
+          controller: 'CreditController'
+        }
+      }
+    })
 
   // redirects to default route for undefined routes
   $urlRouterProvider.otherwise('/app/home');

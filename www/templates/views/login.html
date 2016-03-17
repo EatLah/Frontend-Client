@@ -1,0 +1,28 @@
+<ion-view class="login-page">
+	<ion-content class="padding login-content">
+		<div class="content-main">
+			<div class="content-main-title">
+				<p class="title">
+		        	<img class="logo" src="img/EatLah_logo.png" alt="EatLah" />
+		        </p>
+			</div>	
+		</div>
+		<ion-list class="list-inset">
+    		<div class="item item item-icon-left">
+    			<i class="icon ion-iphone"></i>
+    			<input type="tel" placeholder="Mobile Number">
+  			</div>
+  			<div class="item item item-icon-left">
+  				<i class="icon ion-locked"></i>
+    			<input type="password" placeholder="Password">
+  			</div>
+		</ion-list>
+    <div class="button-full-group padding">
+      <button class="button button-block button-calm" ng-click="userLogin()">Login</button>
+  		<a href="">Forget Password?</a>
+    </div>
+    <div class="button-group padding">
+      <div class="register-text">Don't have an account? <a ui-sref="app.register">Register</a></div>
+    </div>
+	</ion-content>
+</ion-view>
