@@ -7,22 +7,24 @@
 		        </p>
 			</div>	
 		</div>
-		<ion-list class="list-inset">
-    		<div class="item item item-icon-left">
-    			<i class="icon ion-iphone"></i>
-    			<input type="tel" placeholder="Mobile Number" ng-model="credential.contactNumber">
-  			</div>
-  			<div class="item item item-icon-left">
-  				<i class="icon ion-locked"></i>
-    			<input type="password" placeholder="Password" ng-model="credential.userPassword">
-  			</div>
-		</ion-list>
-    <div class="button-full-group padding">
-      <button class="button button-block button-calm" ng-click="userLogin()">Login</button>
-  		<a href="">Forget Password?</a>
-    </div>
-    <div class="button-group padding">
-      <div class="register-text">Don't have an account? <a ui-sref="app.register">Register</a></div>
-    </div>
+    <form name="loginForm">
+    	<ion-list class="list-inset">
+      		<div class="item item item-icon-left">
+      			<i class="icon ion-iphone"></i>
+      			<input type="tel" placeholder="Mobile Number" ng-model="credential.contactNumber" required>
+    			</div>
+    			<div class="item item item-icon-left">
+    				<i class="icon ion-locked"></i>
+      			<input type="password" placeholder="Password" ng-model="credential.userPassword" required>
+    			</div>
+    	</ion-list>
+      <div class="button-full-group padding">
+        <button class="button button-block button-calm" ng-disabled="loginForm.$invalid" ng-click="userLogin(loginForm)">Login</button>
+    		<a href="">Forget Password?</a>
+      </div>
+      <div class="button-group padding">
+        <div class="register-text">Don't have an account? <a ui-sref="app.register">Register</a></div>
+      </div>
+    </form>
 	</ion-content>
 </ion-view>

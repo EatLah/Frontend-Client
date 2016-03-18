@@ -13,10 +13,12 @@ angular.module('MyApp')
   		$scope.credential = {};
 		});
 
-  	$scope.goToCreditPage = function() {
-  		$scope.credential.userID = null;
-  		LocalStorageService.setObject('register_credential', $scope.credential);
-  		$state.go('app.credit');
+  	$scope.goToCreditPage = function(form) {
+      if (form.$valid) {
+    		$scope.credential.userID = null;
+    		LocalStorageService.setObject('register_credential', $scope.credential);
+    		$state.go('app.credit');
+      }
   	};
 
   });
