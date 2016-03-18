@@ -56,6 +56,13 @@ angular.module('MyApp')
   					prepStatus: null
   				};
 
+          var alertPopup = $ionicPopup.alert({
+            title: 'Reserve Successfully!',
+            template: 'You have made a reservation!'
+          });
+
+          alertPopup.then();
+
   				$state.go('app.home');
   			} else {
   				console.log("Don't make this reservation!");
