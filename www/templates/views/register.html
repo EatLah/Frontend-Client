@@ -8,27 +8,27 @@
 		<ion-list class="list-inset">
         <div class="item item item-icon-left">
           <i class="icon ion-person"></i>
-          <input type="text" placeholder="Prefix">
+          <input type="text" placeholder="Prefix" ng-model="credential.prefix">
         </div>
         <div class="item item item-icon-left">
           <i class="icon ion-person"></i>
-          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Name" ng-model="credential.userName">
         </div>
     		<div class="item item item-icon-left">
     			<i class="icon ion-iphone"></i>
-    			<input type="email" placeholder="Mobile Number">
+    			<input type="tel" placeholder="Mobile Number" ng-model="credential.contactNumber">
   			</div>
   			<div class="item item item-icon-left">
   				<i class="icon ion-locked"></i>
-    			<input type="password" placeholder="Password">
+    			<input type="password" placeholder="Password" ng-model="credential.userPassword">
   			</div>
         <div class="item item item-icon-left">
           <i class="icon ion-locked"></i>
-          <input type="password" placeholder="Confirm Password">
+          <input type="password" placeholder="Confirm Password" ng-model="credential.userRepassword">
         </div>
 		</ion-list>
     <div class="button-full-group padding">
-      <button class="button button-block button-calm" ui-sref="app.credit">Next</button>
+      <button class="button button-block button-calm" ng-click="goToCreditPage()">Next</button>
     </div>
     <div class="have-account">
       <div class="have-account-text">Already have an account? <a ui-sref="app.login">Login</a></div>

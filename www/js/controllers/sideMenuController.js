@@ -7,16 +7,19 @@
  * # MainController
  */
 angular.module('MyApp')
-  .controller('SideMenuController', function($scope, $state, $ionicHistory, $ionicPopup) {
+  .controller('SideMenuController', function($scope, $state, $ionicHistory, $ionicPopup, LocalStorageService) {
     $scope.$on('$ionicView.enter', function() {
       $ionicHistory.nextViewOptions({
         historyRoot: true,
         disableAnimate: true,
         disableBack: true
       });
-      // if (!$localStorage.get('token') && !$state.includes("app.register") && !$state.includes("app.login")) {
-      //   $state.go('app.login');
-      // }
+      if (!LocalStorageService.get('eatlah_token') &&
+        !$state.includes("app.register") &&
+        !$state.includes("app.login") &&
+        !$state.includes("app.credit")) {
+        $state.go('app.login');
+      }
     });
 
     $scope.logout = function() {

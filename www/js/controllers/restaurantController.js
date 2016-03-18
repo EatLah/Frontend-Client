@@ -8,41 +8,6 @@
  */
 angular.module('MyApp')
   .controller('RestaurantController', function($scope, $state, $ionicHistory, $ionicLoading, LocalStorageService, RestaurantService) {
-  	// For testing purpose
-  	// $scope.favoriteRestaurantList = [
-	  // 	{
-	  // 		'ID': 1,
-	  // 		'restaurantName': 'First Restaurant',
-	  // 		'restaurantType': 'Chinese'
-	  // 	},
-	  // 	{
-	  // 		'ID': 2,
-	  // 		'restaurantName': 'Second Restaurant',
-	  // 		'restaurantType': 'Japanese'
-	  // 	},
-	  // 	{
-	  // 		'ID': 3,
-	  // 		'restaurantName': 'Third Restaurant',
-	  // 		'restaurantType': 'Western'
-	  // 	}
-	  // ];
-  	// $scope.allRestaurantList = [
-  	// 	{
-	  // 		'ID': 1,
-	  // 		'restaurantName': 'First Restaurant',
-	  // 		'restaurantType': 'Chinese'
-	  // 	},
-	  // 	{
-	  // 		'ID': 2,
-	  // 		'restaurantName': 'Second Restaurant',
-	  // 		'restaurantType': 'Japanese'
-	  // 	},
-	  // 	{
-	  // 		'ID': 3,
-	  // 		'restaurantName': 'Third Restaurant',
-	  // 		'restaurantType': 'Western'
-	  // 	}
-  	// ];
 
   	$scope.$on('$ionicView.enter', function() {
 		  $scope.getRestaurantList();
