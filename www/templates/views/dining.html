@@ -20,10 +20,10 @@
             <div class="number-title">Number of Guests:</div>
             <div class="row">
               <label class="item-input adults-number col col-40 col-offset-5">
-                <input type="number" placeholder="Adults">
+                <input type="number" placeholder="Adults" ng-model="diningDetail.adultAmount">
               </label>
               <label class="item-input children-number col col-40 col-offset-10">
-                <input type="number" placeholder="Children">
+                <input type="number" placeholder="Children" ng-model="diningDetail.childAmount">
               </label>
             </div>
           </div>
@@ -31,7 +31,7 @@
             <div class="date-title">Date:</div>
             <div class="row">
               <label class="item-input date-input col col-90 col-offset-5">
-                <input type="date">
+                <input type="date" placeholder="MM-dd" ng-model="diningDetail.diningDate">
               </label>
             </div>
           </div>
@@ -39,13 +39,13 @@
             <div class="time-title">Time:</div>
             <div class="row">
               <label class="item-input time-input col col-90 col-offset-5">
-                <input type="time">
+                <input type="time" placeholder="HH:mm" ng-model="diningDetail.diningTime">
               </label>
             </div>
           </div>
         </div>
         <div class="padding">
-          <div class="button button-block button-positive" ng-click="">Next</div>
+          <div class="button button-block button-positive" ng-click="goToInfoPage()">Next</div>
         </div>
       </div>
     </ion-content>

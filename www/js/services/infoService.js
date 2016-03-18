@@ -6,9 +6,9 @@ angular.module('MyApp')
 .factory('InfoService', function($http, LocalStorageService, ApiService) {
 	var createReservation = function(reservation, callback) {
 		$http({
-      url: ApiService.getEndpoint() + '/item/items',
-      method: 'GET',
-      params: reservation
+      url: ApiService.getEndpoint() + '/reservation/create',
+      method: 'POST',
+      data: reservation
     }).success(function(data) {
       callback(data);
     });
@@ -16,9 +16,9 @@ angular.module('MyApp')
 
 	var createCustomOrder = function(customOrder, callback) {
 		$http({
-      url: ApiService.getEndpoint() + '/item/items',
-      method: 'GET',
-      params: customOrder
+      url: ApiService.getEndpoint() + '/customOrder/create',
+      method: 'POST',
+      data: customOrder
     }).success(function(data) {
       callback(data);
     });
@@ -26,9 +26,9 @@ angular.module('MyApp')
 
 	var createOrderItem = function(orderItem, callback) {
 		$http({
-      url: ApiService.getEndpoint() + '/item/items',
-      method: 'GET',
-      params: orderItem
+      url: ApiService.getEndpoint() + '/orderItem/create',
+      method: 'POST',
+      data: orderItem
     }).success(function(data) {
       callback(data);
     });
@@ -36,6 +36,7 @@ angular.module('MyApp')
 
 	return {
 		createReservation: createReservation,
-		createCustomOrder: createCustomOrder
+		createCustomOrder: createCustomOrder,
+    createOrderItem: createOrderItem
 	};
 });
