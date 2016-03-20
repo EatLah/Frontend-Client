@@ -17,7 +17,21 @@ angular.module('MyApp')
     });
 	};
 
+  var getCardInfo = function(customerID, callback) {
+    $http({
+      url: ApiService.getEndpoint() + '/credit/credit',
+      method: 'GET',
+      params: {
+        customerID: customerID
+      }
+    }).success(function(data) {
+      console.log(data);
+      callback(data);
+    });
+  };
+
 	return {
-		getAccountInfo: getAccountInfo
+		getAccountInfo: getAccountInfo,
+    getCardInfo: getCardInfo
 	};
 });

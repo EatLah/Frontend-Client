@@ -11,6 +11,7 @@ angular.module('MyApp')
 
   	$scope.$on('$ionicView.enter', function() {
   		$scope.eatlah_user = LocalStorageService.getObject('eatlah_user');
+  		$scope.getAccountInfo();
 		});
 
   	$scope.show = function() {
@@ -28,8 +29,11 @@ angular.module('MyApp')
 	  	AccountService.getAccountInfo($scope.eatlah_user.contactNumber, function(data) {
 	  		LocalStorageService.setObject('eatlah_user', data);
 	  		$scope.eatlah_user = LocalStorageService.getObject('eatlah_user');
-	  		$scope.hide();
-	  		$scope.$broadcast('scroll.refreshComplete');
+	  		AccountService.getCardInfo($scope.eatlah_user.userID, function(data) {
+		  		$scope.eatlah_user.cardNumber = data.cardNumber;
+		  		$scope.hide();
+	  			$scope.$broadcast('scroll.refreshComplete');
+		  	});
 	  	});
 	  };
    

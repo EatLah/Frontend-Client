@@ -15,7 +15,19 @@ angular.module('MyApp')
     });
 	};
 
+  var registerCreditCard = function(creditCard, callback) {
+    $http({
+      url: ApiService.getEndpoint() + '/credit/credit',
+      method: 'POST',
+      data: creditCard
+    }).success(function(data) {
+      console.log(data);
+      callback(data);
+    });
+  };
+
 	return {
-		register: register
+		register: register,
+    registerCreditCard: registerCreditCard
 	};
 });

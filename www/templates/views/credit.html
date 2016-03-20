@@ -6,16 +6,18 @@
     </ion-header-bar>
 		<div class="content-main padding">
 		</div>
-		<ion-list class="list-inset">
-      <div class="item item item-icon-left">
-        <i class="icon ion-card"></i>
-        <input type="text" placeholder="+ Add a Credit Card">
+    <form name="cardForm">
+  		<ion-list class="list-inset">
+        <div class="item item item-icon-left">
+          <i class="icon ion-card"></i>
+          <input type="text" placeholder="+ Add a Credit Card" ng-model='card.card.cardNumber' required>
+        </div>
+  		</ion-list>
+      <div class="terms">By registering, I have read and agreed<br> to the <a>Terms of Use</a> and <a>Privacy  Policy</a></div>
+      <div class="button-full-group padding">
+        <button class="button button-block button-calm" ng-disabled="cardForm.$invalid" ng-click="userRegister(true)">Register</button>
       </div>
-		</ion-list>
-    <div class="terms">By registering, I have read and agreed<br> to the <a>Terms of Use</a> and <a>Privacy  Policy</a></div>
-    <div class="button-full-group padding">
-      <button class="button button-block button-calm" ng-click="userRegister()">Register</button>
-    </div>
-    <div class="skip" ng-click="userRegister()">Skip the step</div>
+    </form>
+    <div class="skip" ng-click="userRegister(false)">Skip the step</div>
 	</ion-content>
 </ion-view>

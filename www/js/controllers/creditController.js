@@ -11,6 +11,8 @@ angular.module('MyApp')
 
   	$scope.$on('$ionicView.enter', function() {
   		$scope.credential = LocalStorageService.getObject('register_credential');
+  		$scope.card = {};
+  		$scope.card.card = {};
 		});
 
 		$scope.show = function() {
@@ -23,7 +25,13 @@ angular.module('MyApp')
 	    $ionicLoading.hide();
 	  };
 
-		$scope.userRegister = function() {
+	  $scope.cardRegister = function() {
+	  	RegisterService.registerCreditCard($scope.card, function(data) {
+	  		console.log(data);
+	  	});
+	  };
+
+		$scope.userRegister = function(hasCard) {
 			$scope.show();
 
 			$scope.user = {};
@@ -42,6 +50,12 @@ angular.module('MyApp')
 				if (data.status === 'success') {
 					LocalStorageService.set('eatlah_token', data.eatlah_token);
   				LocalStorageService.setObject('eatlah_user', data.eatlah_user);
+
+  				if (hasCard) {
+  					$scope.card.card.customerID = data.eatlah_user.userID;
+  					$scope.cardRegister();
+  				}
+
   				$scope.hide();
           $state.go('app.home');
 				} else {
