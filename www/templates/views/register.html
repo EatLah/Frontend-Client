@@ -17,19 +17,20 @@
           </div>
       		<div class="item item item-icon-left">
       			<i class="icon ion-iphone"></i>
-      			<input type="tel" placeholder="Mobile Number" ng-model="credential.contactNumber">
+      			<input type="tel" placeholder="Mobile Number" ng-model="credential.contactNumber" required>
     			</div>
     			<div class="item item item-icon-left">
     				<i class="icon ion-locked"></i>
-      			<input type="password" placeholder="Password" ng-model="credential.userPassword" required>
+      			<input type="password" placeholder="Password" ng-model="credential.userPassword" name="userPassword" required>
     			</div>
           <div class="item item item-icon-left">
             <i class="icon ion-locked"></i>
-            <input type="password" placeholder="Confirm Password" ng-model="credential.userRepassword" required>
+            <input type="password" placeholder="Confirm Password" ng-model="credential.userRepassword" name="userRepassword" data-match="credential.userPassword" required>
           </div>
+          <div class="positive" ng-show="!isPasswordMatch">Password not match!</div>
   		</ion-list>
       <div class="button-full-group padding">
-        <button class="button button-block button-calm" ng-disabled="registerForm.$invalid" ng-click="goToCreditPage(registerForm)">Next</button>
+        <button class="button button-block button-calm" ng-disabled="registerForm.$invalid || registerForm.userRepassword.$error.match" ng-click="goToCreditPage(registerForm)">Next</button>
       </div>
     </form>
     <div class="have-account">
