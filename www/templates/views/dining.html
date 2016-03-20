@@ -11,42 +11,44 @@
             <img class="logo" src="img/restaurant_square.png" alt="detail" />
           </p>
         </div>
-        <div class="list">
-          <div class="item item-text-wrap restaurant-name">
-            {{restaurant.restaurantName}}
-          </div>
+        <form name="diningDetailForm">
+          <div class="list">
+            <div class="item item-text-wrap restaurant-name">
+              {{restaurant.restaurantName}}
+            </div>
 
-          <div class="item item-text-wrap guests-number">
-            <div class="number-title">Number of Guests:</div>
-            <div class="row">
-              <label class="item-input adults-number col col-40 col-offset-5">
-                <input type="number" placeholder="Adults" ng-model="diningDetail.adultAmount">
-              </label>
-              <label class="item-input children-number col col-40 col-offset-10">
-                <input type="number" placeholder="Children" ng-model="diningDetail.childAmount">
-              </label>
+            <div class="item item-text-wrap guests-number">
+              <div class="number-title">Number of Guests:</div>
+              <div class="row">
+                <label class="item-input adults-number col col-40 col-offset-5">
+                  <input type="number" placeholder="Adults" ng-model="diningDetail.adultAmount" required>
+                </label>
+                <label class="item-input children-number col col-40 col-offset-10">
+                  <input type="number" placeholder="Children" ng-model="diningDetail.childAmount" required>
+                </label>
+              </div>
+            </div>
+            <div class="item tem-text-wrap dining-date">
+              <div class="date-title">Date:</div>
+              <div class="row">
+                <label class="item-input date-input col col-90 col-offset-5">
+                  <input type="date" placeholder="MM-dd" ng-model="diningDetail.diningDate" required>
+                </label>
+              </div>
+            </div>
+            <div class="item tem-text-wrap dining-time">
+              <div class="time-title">Time:</div>
+              <div class="row">
+                <label class="item-input time-input col col-90 col-offset-5">
+                  <input type="time" placeholder="HH:mm" ng-model="diningDetail.diningTime" required>
+                </label>
+              </div>
             </div>
           </div>
-          <div class="item tem-text-wrap dining-date">
-            <div class="date-title">Date:</div>
-            <div class="row">
-              <label class="item-input date-input col col-90 col-offset-5">
-                <input type="date" placeholder="MM-dd" ng-model="diningDetail.diningDate">
-              </label>
-            </div>
+          <div class="padding">
+            <div class="button button-block button-positive" ng-disabled="diningDetailForm.$invalid" ng-click="goToInfoPage()">Next</div>
           </div>
-          <div class="item tem-text-wrap dining-time">
-            <div class="time-title">Time:</div>
-            <div class="row">
-              <label class="item-input time-input col col-90 col-offset-5">
-                <input type="time" placeholder="HH:mm" ng-model="diningDetail.diningTime">
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="padding">
-          <div class="button button-block button-positive" ng-click="goToInfoPage()">Next</div>
-        </div>
+        </form>
       </div>
     </ion-content>
 

@@ -18,7 +18,7 @@ angular.module('MyApp')
 
 		$scope.goToInfoPage = function() {
 			$scope.diningDetail.totalPax = $scope.diningDetail.adultAmount + $scope.diningDetail.childAmount;
-
+			
 			LocalStorageService.setObject('diningDetail', $scope.diningDetail);
 			$state.go('app.info');
 		};
