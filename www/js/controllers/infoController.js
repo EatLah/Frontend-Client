@@ -10,6 +10,8 @@ angular.module('MyApp')
   .controller('InfoController', function($scope, $state, $ionicPopup, LocalStorageService, InfoService) {
 
     $scope.$on('$ionicView.enter', function() {
+      $scope.info = {};
+
       $scope.reservation = {};
       $scope.customOrder = {};
       $scope.orderItem = {};

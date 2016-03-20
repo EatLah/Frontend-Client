@@ -14,54 +14,56 @@
             Special requests are not guaranteed and are subject to availability and restaurant discretion.
           </div>
         </div>
-        <div class="list">
-          <div class="item tem-text-wrap info-prefix">
-            <div class="prefix-title">Prefix:</div>
-            <div class="row">
-              <label class="item-input prefix-input col col-90 col-offset-5">
-                <input type="text">
-              </label>
+        <form name="infoForm">
+          <div class="list">
+            <div class="item tem-text-wrap info-prefix">
+              <div class="prefix-title">Prefix:</div>
+              <div class="row">
+                <label class="item-input prefix-input col col-90 col-offset-5">
+                  <input type="text" placeholder="Eg. Mr" ng-model="info.prefix" required>
+                </label>
+              </div>
+            </div>
+            <div class="item item-text-wrap info-name">
+              <div class="name-title">Name:</div>
+              <div class="row">
+                <label class="item-input first-name col col-40 col-offset-5">
+                  <input type="text" placeholder="First Name" ng-model="info.firstName" required>
+                </label>
+                <label class="item-input last-name col col-40 col-offset-10">
+                  <input type="text" placeholder="Last Name" ng-model="info.lastName" required>
+                </label>
+              </div>
+            </div>
+            <div class="item tem-text-wrap info-mobile">
+              <div class="mobile-title">Mobile Number:</div>
+              <div class="row">
+                <label class="item-input mobile-input col col-90 col-offset-5">
+                  <input type="tel" ng-model="info.mobileNumber" required>
+                </label>
+              </div>
+            </div>
+            <div class="item tem-text-wrap info-email">
+              <div class="email-title">E-mail:</div>
+              <div class="row">
+                <label class="item-input email-input col col-90 col-offset-5">
+                  <input type="email" ng-model="info.email" required>
+                </label>
+              </div>
+            </div>
+            <div class="item tem-text-wrap info-req">
+              <div class="req-title">Special Requests:</div>
+              <div class="row">
+                <label class="item-input req-input col col-90 col-offset-5">
+                  <input type="text" ng-model="info.sepcialReq">
+                </label>
+              </div>
             </div>
           </div>
-          <div class="item item-text-wrap info-name">
-            <div class="name-title">Name:</div>
-            <div class="row">
-              <label class="item-input first-name col col-40 col-offset-5">
-                <input type="text" placeholder="First Name">
-              </label>
-              <label class="item-input last-name col col-40 col-offset-10">
-                <input type="text" placeholder="Last Name">
-              </label>
-            </div>
+          <div class="padding">
+            <button class="button button-block button-balanced" ng-disabled="infoForm.$invalid" ng-click="confirmReservation()">Confirm Reservation</button>
           </div>
-          <div class="item tem-text-wrap info-mobile">
-            <div class="mobile-title">Mobile Number:</div>
-            <div class="row">
-              <label class="item-input mobile-input col col-90 col-offset-5">
-                <input type="tel">
-              </label>
-            </div>
-          </div>
-          <div class="item tem-text-wrap info-email">
-            <div class="email-title">E-mail:</div>
-            <div class="row">
-              <label class="item-input email-input col col-90 col-offset-5">
-                <input type="email">
-              </label>
-            </div>
-          </div>
-          <div class="item tem-text-wrap info-req">
-            <div class="req-title">Special Requests:</div>
-            <div class="row">
-              <label class="item-input req-input col col-90 col-offset-5">
-                <input type="text">
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="padding">
-          <div class="button button-block button-balanced" ng-click="confirmReservation()">Confirm Reservation</div>
-        </div>
+        </form>
       </div>
     </ion-content>
 
