@@ -5,11 +5,30 @@
     </ion-header-bar>
 
     <ion-content class="padding reservation-content">
+      <ion-refresher pulling-text="Pull to refresh" on-refresh="getReservationList()"></ion-refresher>
       <div class="content-main">
-        <div class="content-main-title">
-          <p class="title">
-            
-          </p>
+        <div class="card" ng-repeat="reservation in reservations">
+          <div class="item item-divider order-title">
+            <div class="row">
+              <div class="title item-icon-left">
+                <i class="icon ion-clock"></i>
+                <strong>Reservation ID:&nbsp;</strong>
+              </div>
+              <div class="order-id ">
+                {{reservation.reservationID}}
+              </div>
+            </div>
+          </div>
+          <ion-list>
+            <ion-item><strong>Reservation Status: </strong>{{reservation.reservationStatus}}</ion-item>
+            <ion-item><strong>Reservation Pax: </strong>{{reservation.numberOfPax}}</ion-item>
+            <ion-item><strong>Reservation Time: </strong>{{reservation.bookedTimeslot}}</ion-item>
+          </ion-list>
+          <div class="item item-divider">
+            <div class="button-bar">
+              <button class="button button-assertive icon ion-close-round"></button>
+            </div>
+          </div>
         </div>
         
       </div>
