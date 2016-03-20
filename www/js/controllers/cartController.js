@@ -18,7 +18,7 @@ angular.module('MyApp')
 			$scope.total = 0;
 	    for (var i = 0; i < $scope.cart.length; i++){
 	        var item = $scope.cart[i];
-	        $scope.total += (item.menuItem.foodItemPrice * item.quantity);
+	        $scope.total += (item.menuItem.foodItemPrice * item.orderItemQuantity);
 	    }
 		};
 
@@ -30,6 +30,7 @@ angular.module('MyApp')
 
 		$scope.goToInfoPage = function() {
 			LocalStorageService.setObject('cart', $scope.cart);
+			LocalStorageService.set('totalPrice', $scope.total);
 			$state.go('app.dining');
 		};
 

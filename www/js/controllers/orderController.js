@@ -11,27 +11,23 @@ angular.module('MyApp')
 
   	$scope.$on('$ionicView.enter', function() {
   		$scope.menuItem = LocalStorageService.getObject('menuItem');
+      $scope.orderItem = {};
+      $scope.orderItem.orderItemQuantity = 1;
 		});
 
-  	$scope.orderItemQuantity = 1;
-  	$scope.orderItemSpecialRequests = '';
-
   	$scope.decreaseOneQuantity = function() {
-  		if ($scope.orderItemQuantity > 1) {
-        $scope.orderItemQuantity --;
+  		if ($scope.orderItem.orderItemQuantity > 1) {
+        $scope.orderItem.orderItemQuantity --;
       }
   	};
 
   	$scope.increaseOneQuantity = function() {
-  		$scope.orderItemQuantity ++;
+  		$scope.orderItem.orderItemQuantity ++;
   	};
 
   	$scope.addToCart = function() {
-  		$scope.orderItem = {
-  			menuItem: $scope.menuItem,
-  			quantity: $scope.orderItemQuantity,
-  			totalPrice: $scope.orderItemQuantity*$scope.menuItem.foodItemPrice
-  		};
+  		$scope.orderItem.menuItem = $scope.menuItem;
+  		$scope.orderItem.totalPrice = $scope.orderItem.orderItemQuantity * $scope.menuItem.foodItemPrice;
 
       $scope.cart = LocalStorageService.getObject('cart');
       $scope.cart.push($scope.orderItem);

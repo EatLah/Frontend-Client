@@ -30,6 +30,8 @@ angular.module('MyApp')
           $scope.selectedRestaurant = LocalStorageService.getObject('restaurantDetail');
           $scope.eatlah_user = LocalStorageService.getObject('eatlah_user');
           $scope.diningDetail = LocalStorageService.getObject('diningDetail');
+          $scope.totalPrice = LocalStorageService.get('totalPrice');
+          $scope.cart = LocalStorageService.getObject('cart');
 
   				$scope.reservation.reservation = {
   					reservationID: null,
@@ -37,7 +39,7 @@ angular.module('MyApp')
   					customerID: $scope.eatlah_user.userID,
   					numberOfPax: $scope.diningDetail.totalPax,
   					reservationStatus: null,
-  					bookedTimeslot: null,
+  					bookedTimeslot: $scope.diningDetail.bookedTimeslot,
   					orderNumber: null,
   					review: null
   				};
@@ -48,25 +50,10 @@ angular.module('MyApp')
   					reservationID: null,
   					tableNumber: null,
   					staffID: null,
-  					orderTimestamp: null,
-  					totalBill: null,
+  					orderTimestamp: $scope.diningDetail.bookedTimeslot,
+  					totalBill: $scope.totalPrice,
   					orderStatus: null,
   					orderType: null
-  				};
-
-  				// template
-  				$scope.orderItem.orderItem = {
-  					orderItemID: null,
-  					orderNumber: null,
-  					restaurantID: $scope.selectedRestaurant.ID,
-  					reservationID: null,
-  					tableNumber: null,
-  					foodItemID: null,
-  					orderQty: null,
-  					subTotal: null,
-  					pax: $scope.diningDetail.totalPax,
-  					request: null,
-  					prepStatus: null
   				};
 
           InfoService.createReservation($scope.reservation, function(data) {
@@ -77,9 +64,27 @@ angular.module('MyApp')
             console.log(data);
           });
 
-          InfoService.createOrderItem($scope.orderItem, function(data) {
-            console.log(data);
-          });
+          for (var i = 0; i < $scope.cart.length; i++) {
+            var item = $scope.cart[i];
+            console.log(item);
+            // template
+            $scope.orderItem.orderItem = {
+              orderItemID: null,
+              orderNumber: null,
+              restaurantID: $scope.selectedRestaurant.ID,
+              reservationID: null,
+              tableNumber: null,
+              foodItemID: item.menuItem.ID,
+              orderQty: item.orderItemQuantity,
+              subTotal: item.totalPrice,
+              pax: $scope.diningDetail.totalPax,
+              request: item.orderItemSpecialRequests,
+              prepStatus: null
+            };
+            InfoService.createOrderItem($scope.orderItem, function(data) {
+              console.log(data);
+            });
+          }
 
           var alertPopup = $ionicPopup.alert({
             title: 'Reserve Successfully!',

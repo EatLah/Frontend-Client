@@ -17,9 +17,22 @@ angular.module('MyApp')
     });
   };
 
+  var cancelReservation = function(reservationID, callback) {
+    $http({
+      url: ApiService.getEndpoint() + '/reservation/delete',
+      method: 'DELETE',
+      params: {
+        reservationID: reservationID
+      }
+    }).success(function(data) {
+      callback(data);
+    });
+  };
+
   // public api
   return {
-    getReservations: getReservations
+    getReservations: getReservations,
+    cancelReservation: cancelReservation
   };
 
 });

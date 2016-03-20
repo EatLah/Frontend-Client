@@ -22,18 +22,18 @@
             <div class="quantity-text">Quantity</div>
             <button class="button button-small icon ion-minus minus-button" ng-click='decreaseOneQuantity()'></button>
               <label class="item-input-wrapper quantity-label">
-                <input class="quantity-input" type="number" min="1" ng-model="orderItemQuantity" disabled="">
+                <input class="quantity-input" type="number" min="1" ng-model="orderItem.orderItemQuantity" disabled="">
               </label>
             <button class="button button-small icon ion-plus plus-button" ng-click='increaseOneQuantity()'></button>
           </div>
           <div class="item">
             <div class="item-total-text">Total</div>
-            <div class="item-total-price">S${{(menuItem.foodItemPrice*orderItemQuantity).toFixed(2)}}</div>
+            <div class="item-total-price">S${{(menuItem.foodItemPrice*orderItem.orderItemQuantity).toFixed(2)}}</div>
           </div>
           <div class="item">
             <p>Special Requests (Optional) :</p>
             <label class="item item-input item-special-req">
-              <input type="text" ng-model="orderItemSpecialRequests">
+              <input type="text" ng-model="orderItem.orderItemSpecialRequests">
             </label>
           </div>
         </div>
